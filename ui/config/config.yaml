@@ -1,0 +1,18 @@
+
+database:
+  name: classical_quantum_llm_db
+  user: admin
+  password: secretpassword
+  host: localhost
+  port: 5432
+
+api:
+  key: API_KEY_12345
+
+quantum_backend:
+  provider: IBMQ
+  device: ibmq_qasm_simulator
+
+classical_backend:
+  provider: TensorFlow
+  version: 2.5.0
