@@ -1,0 +1,1 @@
+# quantum_blockchain_contracts.sol content placeholder
