@@ -1,6 +1,8 @@
 
 # docker_quantum_container.yml
 # Docker container configuration for running quantum and classical workloads in isolation
+# docker_quantum_container.yml
+# Docker container configuration for running quantum and classical workloads in isolation
 
 version: '3.8'
 
@@ -12,10 +14,10 @@ services:
       - "8080:8080"
     environment:
       - QUANTUM_BACKEND=ibmq_qasm_simulator
-      - QUANTUM_API_KEY=${QUANTUM_API_KEY}
+      - QUANTUM_API_KEY=${QUANTUM_API_KEY}  # Load API key from environment variables
     volumes:
-      - ./app:/usr/src/app
-    command: ["python", "quantum_service.py"]
+      - ./app:/usr/src/app  # Bind mount the application code
+    command: ["python", "quantum_service.py"]  # Execute the quantum service within the container
 
   classical-app:
     image: python:3.8-slim
@@ -23,9 +25,9 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./app:/usr/src/app
-    command: ["python", "classical_service.py"]
+      - ./app:/usr/src/app  # Bind mount the application code
+    command: ["python", "classical_service.py"]  # Execute the classical service within the container
 
 networks:
   quantum-classical-network:
-    driver: bridge
+    driver: bridge  # Bridge network to connect quantum and classical containers
