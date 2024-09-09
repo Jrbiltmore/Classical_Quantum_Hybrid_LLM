@@ -149,3 +149,28 @@ class QuantumGameEngine:
         self.players = [Player.deserialize(p_data) for p_data in game_state["players"]]
         self.environment = {obj_id: GameObject.deserialize(o_data) for obj_id, o_data in game_state["environment"].items()}
         print(f"Game state loaded from {save_file}")
+
+    def run_game_loop(self):
+        \"\"\" Main game loop, continuously processing turns and quantum events. \"\"\"
+        while not self.check_game_over():
+            self.simulate_turn()
+            self.process_end_of_turn()
+            self.prompt_player_actions()
+            print("Turn completed.")
+
+    def check_game_over(self):
+        \"\"\" Check if the game has ended based on certain conditions. \"\"\"
+        # Placeholder for actual game-over logic
+        return any(player.health <= 0 for player in self.players)
+
+    def prompt_player_actions(self):
+        \"\"\" Prompt players for their actions each turn. \"\"\"
+        for player in self.players:
+            action = player.get_next_action()
+            self.resolve_player_action(player, action)
+
+# Main entry point for running the game
+if __name__ == "__main__":
+    game_engine = QuantumGameEngine()
+    game_engine.initialize_game()
+    game_engine.run_game_loop()
