@@ -1,0 +1,3 @@
+
+# This file contains an index for voxel data.
+# In a real implementation, this would store voxel data indices for fast lookup.
