@@ -1,0 +1,29 @@
+
+# Example Hexal File
+# This file provides an example hexal structure with multiple dimensions and attributes.
+
+{
+    "name": "ExampleHexalStructure",
+    "dimensions": {
+        "x": 10,
+        "y": 15,
+        "z": 5
+    },
+    "attributes": {
+        "color": "green",
+        "opacity": 0.85,
+        "quantum_state": "entangled",
+        "temperature": "295K",
+        "spin": "1/2"
+    },
+    "geometry": {
+        "type": "hexagonal",
+        "grid_size": 5,
+        "orientation": "flat-topped",
+        "grid_spacing": 2.5
+    },
+    "quantum_data": {
+        "probability_distribution": [0.25, 0.50, 0.25],
+        "entanglement_factor": 0.75
+    }
+}

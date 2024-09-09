@@ -1,0 +1,21 @@
+
+# Default Hexal Template
+# This file defines a basic structure for hexal files used in the Hexal Illustrator project.
+
+{
+    "name": "DefaultHexalStructure",
+    "dimensions": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "attributes": {
+        "color": "blue",
+        "opacity": 1.0,
+        "quantum_state": "superposition"
+    },
+    "geometry": {
+        "type": "hexagonal",
+        "grid_size": 1
+    }
+}
