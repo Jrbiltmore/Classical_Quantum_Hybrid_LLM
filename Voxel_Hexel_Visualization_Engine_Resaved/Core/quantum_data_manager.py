@@ -1,3 +1,4 @@
+# quantum_data_manager.py
 # Quantum Data Manager for Voxel-Hexel Visualization Engine
 
 import numpy as np
